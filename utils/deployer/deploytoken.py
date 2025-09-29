@@ -25,9 +25,6 @@ async def deploy_token():
             input("\nPress Enter to continue")
     else:
         return
-    
-    
-
 
 
 async def platform_choice():
