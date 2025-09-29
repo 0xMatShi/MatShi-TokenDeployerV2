@@ -1,6 +1,6 @@
 import os
-from utils.walletscreator.dev import create_dev_wallet
-from utils.walletscreator.buyer import create_buyer_group
+from utils.walletscreator.createdev import create_dev_wallet
+from utils.walletscreator.createbuyer import create_buyer_group
 from interface.output import show_menu
 from interface.constants import MESSAGES, CREATOR_CHOICES
 

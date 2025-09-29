@@ -1,8 +1,8 @@
 import os
 from interface.constants import MESSAGES, CHECKER_CHOICES
 from interface.output import show_menu
-from utils.balancechecker.dev import check_dev_wallets
-from utils.balancechecker.buyer import check_buyer_wallets
+from utils.balancechecker.checkdev import check_dev_wallets
+from utils.balancechecker.checkbuyer import check_buyer_wallets
 
 def clear_console():
     os.system("cls" if os.name == "nt" else "clear")
