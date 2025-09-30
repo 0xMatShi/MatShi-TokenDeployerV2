@@ -36,7 +36,7 @@ async def edit_buyer_group():
 
         while True:
             clear_console()
-            print(f"\n[+] Группа: {group.name}\n")
+            print(f"\nGroup: {group.name}\n")
 
             choice = await show_menu(
                 message=ACTION,
