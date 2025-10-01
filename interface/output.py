@@ -17,7 +17,7 @@ def show_logo():
     ██║╚██╔╝██║██╔══██║   ██║   ╚════██║██╔══██║██║╚═════╝
     ██║ ╚═╝ ██║██║  ██║   ██║   ███████║██║  ██║██║
     ╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝{reset}
-    {white}              MatShi- TokenDeployer{reset}
+    {white}              MatShi- TokenDeployerV2{reset}
     """
     print(logo_text)
 
