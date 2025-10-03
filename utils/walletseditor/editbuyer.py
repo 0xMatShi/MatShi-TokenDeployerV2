@@ -81,7 +81,7 @@ async def edit_buyer_wallets(session, group_id: int, group_name: str):
         input("\nPress Enter to continue...")
         return
 
-    choices = [f"{w.number} ({w.address})" for w in wallets]
+    choices = [f"{w.number} ({w.public_key})" for w in wallets]
     choice = await show_menu(
         message=SELECT_MESSAGES[2],
         choices=choices,
@@ -92,7 +92,7 @@ async def edit_buyer_wallets(session, group_id: int, group_name: str):
     while True:
         clear_console()
         print(f"\nBuyer Wallet {wallet.number}:\n")
-        print(f"Public Key: {wallet.address}")
+        print(f"Public Key: {wallet.public_key}")
         print(f"Private Key: {wallet.private_key}")
 
         action = await show_menu(

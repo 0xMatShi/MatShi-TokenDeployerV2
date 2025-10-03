@@ -41,10 +41,10 @@ async def check_buyer_wallets():
 
     async with aiohttp.ClientSession() as http:
         balances = await asyncio.gather(
-            *[get_balance(http, w.address) for w in wallets]
+            *[get_balance(http, w.public_key) for w in wallets]
         )
 
-    table = [[w.number, w.address, f"{b:.6f}"] for w, b in zip(wallets, balances)]
+    table = [[w.number, w.public_key, f"{b:.6f}"] for w, b in zip(wallets, balances)]
     logger.info(
         f"\n\nBalances of Buyer-Wallets (group '{group.name}'):\n"
         + tabulate(

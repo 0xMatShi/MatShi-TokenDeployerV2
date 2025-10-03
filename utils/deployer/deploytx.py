@@ -32,6 +32,7 @@ async def deploy_pump_tx():
         return
     
     mint_keypair = await generate_vanity_keypair("pump")
+    input("Press Enter to continue...")
 
     form_data = await get_token_metadata()    
 

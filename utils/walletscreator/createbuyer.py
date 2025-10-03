@@ -51,6 +51,6 @@ async def create_buyer_group():
 
         logger.info(f"{count} Buyer-Wallets created in the '{group_name}' group.")
         for w in wallets:
-            logger.info(f"{w.number}) {w.address}")
+            logger.info(f"{w.number}) {w.public_key}")
 
 

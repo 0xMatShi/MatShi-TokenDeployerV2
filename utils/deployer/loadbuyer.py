@@ -45,6 +45,6 @@ async def load_buyer_wallets(group_id: int) -> list[dict]:
             kp = Keypair.from_bytes(raw)
             wallets.append({"address": str(kp.pubkey()), "keypair": kp})
         except Exception as e:
-            logger.error(f"Error while loading wallet {w.address}: {e}")
+            logger.error(f"Error while loading wallet {w.public_key}: {e}")
 
     return wallets

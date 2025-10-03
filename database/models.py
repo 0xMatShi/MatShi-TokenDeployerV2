@@ -1,5 +1,4 @@
 from database.engine import BaseSQLAlchemyModel
-from sqlalchemy import Integer, String, ForeignKey
 from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy import Integer, String, ForeignKey, DateTime, func
@@ -37,7 +36,7 @@ class BuyerWallet(BaseSQLAlchemyModel):
     id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
     group_id: Mapped[int] = mapped_column(ForeignKey("buyer_groups.id", ondelete="CASCADE"))
     number: Mapped[int] = mapped_column(Integer, nullable=False)
-    address: Mapped[str] = mapped_column(String, nullable=False)
+    public_key: Mapped[str] = mapped_column(String, nullable=False)
     private_key: Mapped[str] = mapped_column(String, nullable=False)
 
     group: Mapped["BuyerGroup"] = relationship(back_populates="wallets")
